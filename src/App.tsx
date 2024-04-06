@@ -13,8 +13,7 @@ function App() {
   const getSentiment = async () => {
     try {
       const response = await axios.post(
-        "http://158.160.161.155:8080/predictions/sentiment",
-        { text }
+        `http://158.160.161.155:8080/predictions/sentiment?data=${text}`
       );
       setSentiment(response.data.data);
     } catch (error) {
