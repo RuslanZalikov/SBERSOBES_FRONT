@@ -20,7 +20,6 @@ const getSentiment = async () => {
 ```
 # Установка зависимостей
 ```bash
-yarn install
 npm install pm2 -g
 ```
 # Запуск проекта
