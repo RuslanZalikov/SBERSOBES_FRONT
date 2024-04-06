@@ -1,0 +1,108 @@
+.andika-regular {
+  font-family: "Andika", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.andika-bold {
+  font-family: "Andika", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.andika-regular-italic {
+  font-family: "Andika", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.andika-bold-italic {
+  font-family: "Andika", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+body {
+  overflow: hidden;
+}
+
+input {
+  border-radius: 3px;
+  border: 1px solid rgba(174, 192, 214, 1);
+  width: 343px;
+  height: 53px;
+  color: rgba(45, 45, 45, 1);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0px 16px 0px 16px;
+  font-family: "Andika";
+}
+
+input::placeholder {
+  color: rgba(167, 167, 167, 1);
+}
+
+input:hover {
+  border: 1px solid rgba(101, 177, 247, 1);
+}
+
+p {
+  font-family: "Andika";
+}
+
+button {
+  width: 343px;
+  height: 53px;
+  border-radius: 38px;
+  border: none;
+  background-color: rgba(101, 177, 247, 1);
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Andika";
+}
+
+button:hover {
+  background-color: rgba(63, 151, 233, 1);
+}
+
+button:disabled {
+  background-color: rgb(110, 123, 136);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  padding-top: 100px;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.smail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 343px;
+  height: 370px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.smail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #939393;
+}
+
+.reboot {
+  padding-top: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+}
