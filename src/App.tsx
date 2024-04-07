@@ -12,9 +12,14 @@ function App() {
 
   const getSentiment = async () => {
     try {
-      const response = await axios.post(
-        `http://158.160.161.155:8080/predictions/sentiment?data=${text}`
-      );
+      const data = new FormData();
+      data.append("body", text);
+      const response = await axios({
+        method: "post",
+        maxBodyLength: Infinity,
+        url: "http://158.160.161.155:8080/predictions/sentiment",
+        data: data,
+      });
       setSentiment(response.data.data);
     } catch (error) {
       setSentiment(null);
@@ -36,8 +41,8 @@ function App() {
         <div className="smail-container">
           <div className="smail">
             {sentiment === 0 && <Neutral />}
-            {sentiment === 1 && <Negative />}
-            {sentiment === 2 && <Positive />}
+            {sentiment === 1 && <Positive />}
+	    {sentiment === 2 && <Negative />}
           </div>
           <a onClick={getSentiment} className="reboot">
             Начать заново <Reboot />
